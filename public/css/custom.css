@@ -1,0 +1,501 @@
+/* =====================================================
+   IUB Student Complaint Portal — Navy Blue Theme
+   The Islamia University of Bahawalpur
+   ===================================================== */
+
+:root {
+    --iub-navy:        #0a1f44;
+    --iub-navy-dark:   #061530;
+    --iub-navy-mid:    #12305e;
+    --iub-navy-light:  #1a4080;
+    --iub-gold:        #c9a227;
+    --iub-gold-light:  #e8c040;
+    --iub-sky:         #dce8f5;
+    --iub-ink:         #1a2340;
+    --iub-muted:       #5a6a8a;
+    --iub-border:      #d0dce8;
+    --iub-bg:          #f4f7fb;
+    --white:           #ffffff;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    background-color: var(--iub-bg);
+    color: var(--iub-ink);
+    font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+/* ── Navbar ── */
+.navbar-scp {
+    background: var(--iub-navy) !important;
+    border-bottom: 3px solid var(--iub-gold);
+    box-shadow: 0 3px 16px rgba(10,31,68,.35);
+    padding-top: .7rem;
+    padding-bottom: .7rem;
+}
+.navbar-scp .navbar-brand {
+    color: var(--white) !important;
+    font-weight: 800;
+    font-size: 1rem;
+    letter-spacing: .2px;
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+}
+.navbar-brand-logo {
+    height: 42px;
+    width: 42px;
+    object-fit: contain;
+    border-radius: 6px;
+    background: var(--white);
+    padding: 2px;
+}
+.navbar-brand-text { line-height: 1.1; }
+.navbar-brand-title { display: block; font-size: .95rem; font-weight: 800; color: var(--white); }
+.navbar-brand-sub { display: block; font-size: .65rem; font-weight: 500; color: var(--iub-gold-light); letter-spacing: .08em; text-transform: uppercase; }
+.navbar-scp .nav-link {
+    color: rgba(255,255,255,.85) !important;
+    font-size: .78rem;
+    font-weight: 700;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    padding: .5rem .8rem !important;
+    border-radius: 6px;
+    transition: all .15s;
+}
+.navbar-scp .nav-link:hover { color: var(--iub-gold-light) !important; background: rgba(255,255,255,.08); }
+.navbar-scp .navbar-toggler { border-color: rgba(255,255,255,.3); }
+.navbar-scp .navbar-toggler-icon { filter: invert(1); }
+
+/* ── Buttons ── */
+.btn-scp {
+    background: var(--iub-gold);
+    border: none;
+    color: var(--iub-navy-dark);
+    border-radius: 999px;
+    padding: .65rem 2rem;
+    font-weight: 800;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    font-size: .82rem;
+    transition: background .15s, transform .1s;
+    display: inline-block;
+    text-decoration: none;
+}
+.btn-scp:hover { background: var(--iub-gold-light); color: var(--iub-navy-dark); transform: translateY(-1px); }
+.btn-scp-outline {
+    background: transparent;
+    border: 2px solid rgba(255,255,255,.55);
+    color: var(--white);
+    border-radius: 999px;
+    padding: .55rem 1.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: .82rem;
+    cursor: pointer;
+    transition: all .15s;
+    text-decoration: none;
+    display: inline-block;
+}
+.btn-scp-outline:hover { background: rgba(255,255,255,.12); border-color: var(--iub-gold); color: var(--iub-gold-light); }
+.btn-navy {
+    background: var(--iub-navy);
+    color: var(--white);
+    border: none;
+    border-radius: 999px;
+    padding: .65rem 2rem;
+    font-weight: 800;
+    font-size: .82rem;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background .15s;
+}
+.btn-navy:hover { background: var(--iub-navy-mid); }
+
+/* ── Login page ── */
+.login-wrapper {
+    min-height: calc(100vh - 130px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+}
+.login-card {
+    width: 100%;
+    max-width: 900px;
+    border-radius: 1.4rem;
+    overflow: hidden;
+    box-shadow: 0 12px 48px rgba(10,31,68,.18);
+    display: flex;
+    min-height: 500px;
+}
+.login-left {
+    flex: 0 0 340px;
+    background: linear-gradient(160deg, var(--iub-navy-dark) 0%, var(--iub-navy-mid) 60%, var(--iub-navy-light) 100%);
+    padding: 3rem 2.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+.login-left::before {
+    content: '';
+    position: absolute;
+    bottom: -60px; right: -60px;
+    width: 220px; height: 220px;
+    border-radius: 50%;
+    background: rgba(201,162,39,.1);
+}
+.login-left::after {
+    content: '';
+    position: absolute;
+    top: -40px; left: -40px;
+    width: 160px; height: 160px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.04);
+}
+.login-iub-logo {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    background: var(--white);
+    border-radius: 50%;
+    padding: 8px;
+    margin-bottom: 1.4rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,.25);
+    position: relative;
+    z-index: 1;
+}
+.login-left h4 {
+    color: var(--white);
+    font-weight: 800;
+    font-size: 1.2rem;
+    margin-bottom: .3rem;
+    position: relative;
+    z-index: 1;
+}
+.login-left p {
+    color: rgba(255,255,255,.7);
+    font-size: .85rem;
+    line-height: 1.5;
+    margin-bottom: 1.6rem;
+    position: relative;
+    z-index: 1;
+}
+.login-divider {
+    width: 40px;
+    height: 3px;
+    background: var(--iub-gold);
+    border-radius: 99px;
+    margin: 0 auto 1.4rem;
+    position: relative;
+    z-index: 1;
+}
+.login-badge {
+    background: rgba(201,162,39,.2);
+    border: 1px solid rgba(201,162,39,.4);
+    color: var(--iub-gold-light);
+    border-radius: 999px;
+    padding: .3rem 1rem;
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+}
+.login-right {
+    flex: 1;
+    background: var(--white);
+    padding: 3rem 2.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.login-right h2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--iub-navy);
+    margin-bottom: .3rem;
+}
+.login-right .subtitle {
+    color: var(--iub-muted);
+    font-size: .88rem;
+    margin-bottom: 2rem;
+}
+.scp-field-label {
+    font-size: .72rem;
+    font-weight: 800;
+    letter-spacing: .07em;
+    text-transform: uppercase;
+    color: var(--iub-navy);
+    margin-bottom: .45rem;
+    display: block;
+}
+.scp-field-label .req { color: #e74c3c; }
+.login-right .form-control {
+    border: 1.5px solid var(--iub-border);
+    border-radius: 10px;
+    padding: .75rem 1rem;
+    font-size: .95rem;
+    color: var(--iub-ink);
+    background: var(--iub-bg);
+    transition: border-color .15s, box-shadow .15s;
+}
+.login-right .form-control:focus {
+    border-color: var(--iub-navy);
+    background: var(--white);
+    box-shadow: 0 0 0 .2rem rgba(10,31,68,.12);
+}
+.btn-login {
+    background: linear-gradient(135deg, var(--iub-navy-mid), var(--iub-navy));
+    color: var(--white);
+    border: none;
+    border-radius: 10px;
+    padding: .85rem;
+    font-weight: 800;
+    font-size: .95rem;
+    letter-spacing: .04em;
+    width: 100%;
+    cursor: pointer;
+    transition: opacity .15s, transform .1s;
+    margin-top: .5rem;
+}
+.btn-login:hover { opacity: .9; transform: translateY(-1px); color: var(--white); }
+.admin-note {
+    background: var(--iub-sky);
+    border-left: 3px solid var(--iub-navy);
+    border-radius: 0 8px 8px 0;
+    padding: .7rem 1rem;
+    font-size: .8rem;
+    color: var(--iub-muted);
+    margin-top: 1.4rem;
+}
+@media (max-width: 680px) {
+    .login-card { flex-direction: column; }
+    .login-left { flex: none; padding: 2rem 1.5rem; }
+    .login-right { padding: 2rem 1.5rem; }
+}
+
+/* ── Page header ── */
+.scp-page-header {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--iub-navy);
+    margin-bottom: 2rem;
+}
+
+/* ── Admin Dashboard ── */
+.admin-header-bar {
+    background: linear-gradient(135deg, var(--iub-navy-dark), var(--iub-navy-mid));
+    border-radius: 1.2rem;
+    padding: 2rem 2.4rem;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+.admin-header-bar::after {
+    content: '';
+    position: absolute;
+    right: -40px; top: -40px;
+    width: 200px; height: 200px;
+    border-radius: 50%;
+    background: rgba(201,162,39,.1);
+}
+.admin-header-logo {
+    width: 64px; height: 64px;
+    object-fit: contain;
+    background: var(--white);
+    border-radius: 50%;
+    padding: 5px;
+    box-shadow: 0 4px 14px rgba(0,0,0,.2);
+    flex-shrink: 0;
+}
+.admin-header-text h2 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: .2rem;
+    color: var(--white);
+}
+.admin-header-text p {
+    font-size: .85rem;
+    color: rgba(255,255,255,.7);
+    margin: 0;
+}
+.admin-gold-badge {
+    background: var(--iub-gold);
+    color: var(--iub-navy-dark);
+    border-radius: 999px;
+    padding: .3rem 1rem;
+    font-size: .72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    display: inline-block;
+    margin-top: .5rem;
+}
+
+/* Stat cards */
+.stat-card {
+    border-radius: 1rem;
+    padding: 1.4rem 1.2rem;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+    box-shadow: 0 4px 16px rgba(0,0,0,.12);
+    position: relative;
+    overflow: hidden;
+}
+.stat-card::after {
+    content: '';
+    position: absolute;
+    bottom: -20px; right: -20px;
+    width: 80px; height: 80px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.1);
+}
+.stat-card small { font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; opacity: .85; }
+.stat-card h3 { margin: 0; font-weight: 900; font-size: 2.2rem; line-height: 1; }
+.stat-card .stat-icon { font-size: 1.6rem; opacity: .35; position: absolute; top: 1rem; right: 1rem; }
+.bg-scp-purple { background: linear-gradient(135deg, #1a4080, #0a1f44); }
+.bg-scp-pending { background: linear-gradient(135deg, #f39c12, #d68910); }
+.bg-scp-progress { background: linear-gradient(135deg, #1a6fa8, #0f4c75); }
+.bg-scp-resolved { background: linear-gradient(135deg, #1e8449, #145a32); }
+.bg-scp-rejected { background: linear-gradient(135deg, #c0392b, #922b21); }
+
+/* Admin cards */
+.card-scp {
+    border: 1px solid var(--iub-border);
+    border-radius: 1rem;
+    box-shadow: 0 3px 14px rgba(10,31,68,.07);
+    background: var(--white);
+}
+.card-scp-header {
+    background: var(--iub-navy);
+    color: var(--white);
+    border-radius: .9rem .9rem 0 0;
+    padding: 1rem 1.5rem;
+    font-weight: 800;
+    font-size: .95rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+.card-scp-header i { color: var(--iub-gold); }
+
+/* Tables */
+.table thead.table-light th,
+.table-navy-head th {
+    background: var(--iub-navy) !important;
+    color: var(--white) !important;
+    font-size: .72rem;
+    text-transform: uppercase;
+    letter-spacing: .07em;
+    font-weight: 800;
+    border: none !important;
+}
+.table-hover tbody tr:hover { background-color: var(--iub-sky); }
+
+/* Status badges */
+.badge {
+    border-radius: 999px !important;
+    padding: .42em .9em !important;
+    font-weight: 700 !important;
+    font-size: .7rem !important;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+}
+
+/* Hero / landing */
+.hero-scp {
+    background: linear-gradient(135deg, var(--iub-navy-dark), var(--iub-navy-mid));
+    color: #fff;
+    border-radius: 1.2rem;
+    padding: 3.5rem 2rem;
+}
+
+/* Hero form (register/track pages) */
+.scp-hero-panel {
+    display: flex;
+    align-items: center;
+    gap: 3.5rem;
+    padding: 3rem 1rem;
+    flex-wrap: wrap;
+}
+.scp-hero-illustration {
+    flex: 0 0 260px;
+    text-align: center;
+}
+.scp-hero-illustration .icon-wrap {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 1rem;
+    border-radius: 24px;
+    background: var(--iub-sky);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.scp-hero-illustration .icon-wrap i { font-size: 5rem; color: var(--iub-navy); }
+.scp-hero-illustration h5 { font-weight: 800; color: var(--iub-navy); margin-bottom: .3rem; }
+.scp-hero-illustration p { color: var(--iub-muted); font-size: .9rem; max-width: 220px; margin: 0 auto; }
+.scp-hero-form { flex: 1 1 380px; min-width: 300px; }
+.scp-hero-form .form-control,
+.scp-hero-form .form-select {
+    border: 1.5px solid var(--iub-border);
+    border-radius: 10px;
+    padding: .7rem .9rem;
+    font-size: .95rem;
+}
+.scp-hero-form .form-control:focus,
+.scp-hero-form .form-select:focus {
+    border-color: var(--iub-navy);
+    box-shadow: 0 0 0 .2rem rgba(10,31,68,.12);
+}
+
+/* Timeline */
+.timeline { list-style: none; padding-left: 0; }
+.timeline li {
+    border-left: 3px solid var(--iub-navy);
+    padding: 0.25rem 0 1rem 1rem;
+    position: relative;
+    margin-left: 0.5rem;
+}
+.timeline li::before {
+    content: '';
+    position: absolute;
+    left: -8px; top: 4px;
+    width: 12px; height: 12px;
+    border-radius: 50%;
+    background: var(--iub-gold);
+    border: 2px solid var(--iub-navy);
+}
+
+/* Footer */
+.footer-scp {
+    background: var(--iub-navy-dark);
+    color: rgba(255,255,255,.6);
+    border-top: 3px solid var(--iub-gold);
+    font-size: .8rem;
+}
+
+/* Misc */
+@media (max-width: 767px) {
+    .scp-page-header { font-size: 1.6rem; }
+    .scp-hero-panel { gap: 1.5rem; padding: 1.5rem 0; }
+    .admin-header-bar { flex-direction: column; text-align: center; }
+}
+
+/* ── Quick fix: login-wrapper only on login page ── */
+main { min-height: calc(100vh - 130px); }

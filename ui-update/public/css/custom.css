@@ -1,0 +1,239 @@
+:root {
+    --scp-purple: #2b3f8c;
+    --scp-purple-dark: #16214d;
+    --scp-purple-darker: #0d1533;
+    --scp-lavender: #e9ecf6;
+    --scp-ink: #2d2d3a;
+    --scp-muted: #6b7280;
+    --scp-border: #d9deef;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    background-color: #ffffff;
+    color: var(--scp-ink);
+}
+
+/* ---------- Top navbar: clean white, NADRA-style ---------- */
+.navbar-scp {
+    background: #ffffff !important;
+    border-bottom: 1px solid var(--scp-border);
+    box-shadow: 0 2px 10px rgba(75, 63, 176, 0.05);
+    padding-top: .85rem;
+    padding-bottom: .85rem;
+}
+.navbar-scp .navbar-brand {
+    color: var(--scp-purple-dark) !important;
+    font-weight: 800;
+    letter-spacing: .3px;
+}
+.navbar-scp .navbar-brand i { color: var(--scp-purple); }
+.navbar-scp .nav-link {
+    color: var(--scp-ink) !important;
+    font-size: .8rem;
+    font-weight: 700;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    padding: .5rem .9rem !important;
+}
+.navbar-scp .nav-link:hover { color: var(--scp-purple-dark) !important; }
+.navbar-scp .btn-outline-light {
+    color: var(--scp-purple-dark) !important;
+    border-color: var(--scp-border) !important;
+}
+.navbar-scp .btn-outline-light:hover {
+    background: var(--scp-lavender) !important;
+    color: var(--scp-purple-darker) !important;
+}
+.navbar-scp .navbar-toggler { border-color: var(--scp-border); }
+
+/* ---------- Buttons ---------- */
+.btn-scp {
+    background: var(--scp-purple-dark);
+    border: none;
+    color: #fff;
+    border-radius: 999px;
+    padding: .65rem 2rem;
+    font-weight: 700;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+    font-size: .85rem;
+    transition: background .15s ease, transform .1s ease;
+}
+.btn-scp:hover { background: var(--scp-purple-darker); color: #fff; transform: translateY(-1px); }
+.btn-scp-outline {
+    background: #fff;
+    border: 1.5px solid var(--scp-purple-dark);
+    color: var(--scp-purple-dark);
+    border-radius: 999px;
+    padding: .6rem 1.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: .85rem;
+    letter-spacing: .03em;
+}
+.btn-scp-outline:hover { background: var(--scp-lavender); color: var(--scp-purple-darker); }
+
+/* ---------- Hero / page-header pattern (Register / Track style) ---------- */
+.scp-page-header {
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: var(--scp-ink);
+    margin-bottom: 2.2rem;
+}
+.scp-hero-panel {
+    display: flex;
+    align-items: center;
+    gap: 3.5rem;
+    padding: 3rem 1rem;
+    flex-wrap: wrap;
+}
+.scp-hero-illustration {
+    flex: 0 0 260px;
+    text-align: center;
+}
+.scp-hero-illustration .icon-wrap {
+    width: 220px;
+    height: 220px;
+    margin: 0 auto 1rem;
+    border-radius: 28px;
+    background: var(--scp-lavender);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.scp-hero-illustration .icon-wrap i {
+    font-size: 5.5rem;
+    color: var(--scp-purple-dark);
+}
+.scp-hero-illustration .icon-badge {
+    position: absolute;
+    bottom: -10px;
+    right: -6px;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: var(--scp-purple);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 12px rgba(75,63,176,.35);
+}
+.scp-hero-illustration h5 {
+    font-weight: 800;
+    color: var(--scp-ink);
+    margin-bottom: .3rem;
+}
+.scp-hero-illustration p {
+    color: var(--scp-muted);
+    font-size: .9rem;
+    max-width: 220px;
+    margin: 0 auto;
+}
+.scp-hero-form {
+    flex: 1 1 380px;
+    min-width: 300px;
+}
+.scp-field-label {
+    font-size: .75rem;
+    font-weight: 800;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: var(--scp-ink);
+    margin-bottom: .5rem;
+    display: block;
+}
+.scp-field-label .req { color: #e74c3c; }
+.scp-hero-form .form-select,
+.scp-hero-form .form-control {
+    border: 1.5px solid var(--scp-border);
+    border-radius: 10px;
+    padding: .7rem .9rem;
+    font-size: .95rem;
+}
+.scp-hero-form .form-select:focus,
+.scp-hero-form .form-control:focus {
+    border-color: var(--scp-purple);
+    box-shadow: 0 0 0 .2rem rgba(108,92,231,.15);
+}
+
+/* ---------- Generic card ---------- */
+.card-scp {
+    border: 1px solid var(--scp-border);
+    border-radius: 1rem;
+    box-shadow: 0 4px 18px rgba(76, 63, 176, 0.06);
+}
+
+/* ---------- Landing hero banner ---------- */
+.hero-scp {
+    background: linear-gradient(135deg, var(--scp-purple-dark), var(--scp-purple));
+    color: #fff;
+    border-radius: 1.2rem;
+    padding: 3.5rem 2rem;
+}
+
+/* ---------- Stat cards ---------- */
+.stat-card { border-radius: 0.9rem; padding: 1.25rem; color: #fff; }
+.stat-card h3 { margin: 0; font-weight: 700; }
+.bg-scp-purple { background: var(--scp-purple); }
+.bg-scp-pending { background: #f0a500; }
+.bg-scp-progress { background: #17a2b8; }
+.bg-scp-resolved { background: #2ecc71; }
+.bg-scp-rejected { background: #e74c3c; }
+
+/* ---------- Status badges (pill style) ---------- */
+.badge {
+    border-radius: 999px !important;
+    padding: .45em .9em !important;
+    font-weight: 700 !important;
+    font-size: .72rem !important;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+}
+
+/* ---------- Footer ---------- */
+.footer-scp {
+    background: #faf9ff;
+    color: var(--scp-muted);
+    border-top: 1px solid var(--scp-border);
+    font-size: .82rem;
+}
+
+/* ---------- Timeline ---------- */
+.timeline { list-style: none; padding-left: 0; }
+.timeline li {
+    border-left: 3px solid var(--scp-purple);
+    padding: 0.25rem 0 1rem 1rem;
+    position: relative;
+    margin-left: 0.5rem;
+}
+.timeline li::before {
+    content: "";
+    position: absolute;
+    left: -8px;
+    top: 4px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--scp-purple);
+}
+
+/* ---------- Tables ---------- */
+.table thead.table-light th {
+    background: var(--scp-lavender) !important;
+    color: var(--scp-purple-darker);
+    font-size: .75rem;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    font-weight: 800;
+    border-bottom: none;
+}
+
+@media (max-width: 767px) {
+    .scp-page-header { font-size: 1.8rem; }
+    .scp-hero-panel { gap: 1.5rem; padding: 1.5rem 0; }
+}
