@@ -64,4 +64,4 @@ Visit **http://localhost:8000**
   controller action — see the comments in the controller files under
   `app/Http/Controllers`.
 - Admin RBAC is enforced in `app/Http/Middleware/IsAdmin.php`, registered
-  as the `admin` alias in `app/Http/Kernel.php`.
+  as the `admin` alias in `app/Http/Kernel.php`.#deploy on Railway
