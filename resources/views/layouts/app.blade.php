@@ -14,7 +14,7 @@
     <div class="container">
         <a class="navbar-brand fw-bold" href="{{ route('home') }}">
             {{-- IUB Logo: use official SVG/PNG from public/images/iub-logo.png if available --}}
-            <img src="{{ asset('images/iub-logo.png') }}"
+            <img src="{{ asset('images/iub-logo.svg') }}"
                  onerror="this.style.display='none'"
                  alt="IUB" class="navbar-brand-logo">
             <span class="navbar-brand-text">
