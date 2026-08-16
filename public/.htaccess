@@ -1,4 +1,7 @@
-<IfModule mod_rewrite.c>
+<IfModule mod_headers.c>
+    Header unset Content-Security-Policy
+    Header unset Content-Security-Policy-Report-Only
+</IfModule>
     <IfModule mod_negotiation.c>
         Options -MultiViews -Indexes
     </IfModule>
